@@ -14,6 +14,7 @@ import { Not403Component } from './pages/not403/not403.component';
 import { Not404Component } from './pages/not404/not404.component';
 import { PacienteEdicionComponent } from './pages/paciente/paciente-edicion/paciente-edicion.component';
 import { PacienteComponent } from './pages/paciente/paciente.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
 import { GuardService } from './_service/guard.service';
 
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: 'not-403', component: Not403Component },
   { path: 'not-404', component: Not404Component },
   { path: 'login', component: LoginComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-404', pathMatch: 'full' }
 ];
