@@ -30,6 +30,8 @@ import { Not403Component } from './pages/not403/not403.component';
 import { Not404Component } from './pages/not404/not404.component';
 import { ServerErrorsInterceptor } from './shared/server-errors.interceptor';
 import { PerfilComponent } from './pages/perfil/perfil.component';
+import { SignosVitalesComponent } from './pages/signos-vitales/signos-vitales.component';
+import { SignosVitalesEdicionComponent } from './pages/SignosVitales/signos-vitales-edicion/signos-vitales-edicion.component';
 
 export function tokenGetter() {
   return sessionStorage.getItem(environment.TOKEN_NAME);
@@ -55,7 +57,9 @@ export function tokenGetter() {
     LoginComponent,
     Not403Component,
     Not404Component,
-    PerfilComponent
+    PerfilComponent,
+    SignosVitalesComponent,
+    SignosVitalesEdicionComponent
   ],
   //entryComponents:[ MedicoDialogoComponent ],
   imports: [

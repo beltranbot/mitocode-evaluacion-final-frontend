@@ -59,6 +59,11 @@
                 <span>Registrar W.</span>
             </button>
             <mat-divider></mat-divider>
+            <button mat-menu-item (click)="sidenav.toggle()" routerLink="/signos-vitales" style="cursor: pointer">
+                <mat-icon>view_carousel</mat-icon>
+                <span>Signos vitales</span>
+            </button>
+            <mat-divider></mat-divider>
             <button mat-menu-item (click)="sidenav.toggle()" routerLink="/especialidad" style="cursor: pointer">
                 <mat-icon>star_rate</mat-icon>
                 <span>Especialidades</span>

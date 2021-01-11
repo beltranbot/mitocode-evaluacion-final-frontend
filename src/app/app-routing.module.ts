@@ -16,6 +16,8 @@ import { PacienteEdicionComponent } from './pages/paciente/paciente-edicion/paci
 import { PacienteComponent } from './pages/paciente/paciente.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
+import { SignosVitalesComponent } from './pages/signos-vitales/signos-vitales.component';
+import { SignosVitalesEdicionComponent } from './pages/SignosVitales/signos-vitales-edicion/signos-vitales-edicion.component';
 import { GuardService } from './_service/guard.service';
 
 const routes: Routes = [
@@ -37,16 +39,22 @@ const routes: Routes = [
       { path: 'edicion/:id', component: EspecialidadEdicionComponent }
     ], canActivate: [GuardService]
   },
+  {
+    path: 'signos-vitales', component: SignosVitalesComponent, children: [
+      { path: 'nuevo', component: SignosVitalesEdicionComponent },
+      { path: 'edicion/:id', component: SignosVitalesEdicionComponent }
+    ], canActivate: [GuardService]
+  },
   { path: 'medico', component: MedicoComponent, canActivate: [GuardService] },
   { path: 'consulta', component: ConsultaComponent, canActivate: [GuardService] },
   { path: 'consulta-wizard', component: WizardComponent, canActivate: [GuardService] },
   { path: 'consulta-especial', component: ConsultaEspecialComponent, canActivate: [GuardService] },
   { path: 'buscar', component: BuscarComponent, canActivate: [GuardService] },
   { path: 'reporte', component: ReporteComponent, canActivate: [GuardService] },
+  { path: 'perfil', component: PerfilComponent, canActivate: [GuardService]},
   { path: 'not-403', component: Not403Component },
   { path: 'not-404', component: Not404Component },
   { path: 'login', component: LoginComponent },
-  { path: 'perfil', component: PerfilComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-404', pathMatch: 'full' }
 ];
